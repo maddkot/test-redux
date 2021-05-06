@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux';
+/* import {WrapperComponent} from './App'; */
+import {WrapperComponent} from './components/wrapperComponent';
+import {store} from './store/store/store';
+
+const stor = store;
+
+
+stor.subscribe(()=>{console.log(store.getState())})
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={stor}>
+      <WrapperComponent /> 
+    </Provider>    
   </React.StrictMode>,
   document.getElementById('root')
 );
