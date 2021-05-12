@@ -5,6 +5,7 @@ import {bindActionCreators} from 'redux';
 
 const maptoStateProps = state => {
     return {
+      
       textSong: state.secondReducer,
       firstText: state.firstReducer.firstText,
       secondText: state.firstReducer.secondText

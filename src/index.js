@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
-/* import {WrapperComponent} from './App'; */
 import {WrapperComponent} from './components/wrapperComponent';
 import {store} from './store/store/store';
 
+
 const stor = store;
+
 
 
 stor.subscribe(()=>{console.log(store.getState())})

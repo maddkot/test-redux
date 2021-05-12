@@ -3,6 +3,8 @@ import './App.css';
 import React from 'react'
 import {Main} from './components/Main';
 import SongList from './components/SongList';
+import FetchData from './components/FetchData';
+import Sagas from './components/Sagas';
 
 function App(props) {
  const {firstText, secondText, changeFirstText, changeSecondText, addTrack} = props;
@@ -36,7 +38,10 @@ function App(props) {
         addTrack={addTrack} 
         {...props}
         />
-      <SongList {...props}/>      
+      <SongList {...props}/>
+
+      <FetchData /> 
+      <Sagas />     
 
     </div>
   );
